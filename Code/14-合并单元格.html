@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 将水平或垂直合并在一起（跨行合并 、 跨列合并） -->
+    <!-- rowspan: 跨行合并   合并单元格的个数   
+         colspan:跨列合并    合并单元格的个数
+     -->
+     <!-- 
+         1、明确合并哪几个单元格
+         2、通过左上原则，确定保留谁删除谁
+             · 上下合并: 只保留最上的，删除其它
+             · 左右合并: 只保留最左的，删除其它
+         3、给保留的单元格设置：跨行合并或者跨列合并
+      -->
+    <table border="1">
+        <caption><strong>学生成绩单</strong></caption>
+        <!-- 加不加结构，效果是一样的，原因是交给了浏览器进行渲染的 -->
+        <!-- thead: 表格头部 -->
+        <thead>
+            <tr>
+                <!-- <td></td> -->
+                <th>姓名</th>
+                <th>成绩</th>
+                <th>评语</th>
+            </tr>
+        </thead>
+        <!-- tbody: 表格主题 -->
+        <tbody>
+            <tr>
+                <td>张三</td>
+                <td rowspan="2">100分</td>
+                <td>真棒，第一名</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>真棒，第二名</td>
+            </tr>
+        </tbody>
+        <!-- body  foot 之间可以合并 -->
+        <tfoot>
+            <tr>
+                <td>总结</td>
+                <td colspan="2">郎才女貌</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
